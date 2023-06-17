@@ -1,5 +1,5 @@
-name: Bug Report
-description: File a bug report
+name: Add a URL
+description: Add a URL to this service.
 title: '[URL]: '
 labels: ['URL']
 body:
