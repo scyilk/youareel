@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>youareel</title>
+		<script src="redirects.js"></script>
+	</head>
+	<body>
+		<h1>Redirecting...</h1>
+		<script>
+			const urlParams = new URLSearchParams(window.location.search);
+			const redirect = urlParams.get('r');
+			if (redirect === null) {
+				location.replace('/about.html');
+			}
+			if (redirect in redirects) {
+				location.replace(redirects[redirect]);
+			} else {
+				document.querySelector(
+					'h1',
+				).innerText = `Redirect not found for ${redirect}.`;
+			}
+		</script>
+	</body>
+</html>
