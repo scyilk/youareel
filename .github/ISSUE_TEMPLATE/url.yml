@@ -1,0 +1,21 @@
+name: Bug Report
+description: File a bug report
+title: '[URL]: '
+labels: ['URL']
+body:
+    - type: input
+      id: url
+      attributes:
+          label: URL
+          description: The URL to submit that follows the rules below.
+          placeholder: ex. https://example.com/
+      validations:
+          required: true
+    - type: checkboxes
+      id: agreement
+      attributes:
+          label: The Rules
+          description: By submitting this issue, you agree to submit a PG, valid and working URL.
+          options:
+              - label: I agree to follow the rules specified above.
+                required: true
