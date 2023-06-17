@@ -12,7 +12,7 @@
 			const urlParams = new URLSearchParams(window.location.search);
 			const redirect = urlParams.get('r');
 			if (redirect === null) {
-				location.replace('./about.html');
+				location.replace('./youareel/about.html');
 			}
 			if (redirect in redirects) {
 				location.replace(redirects[redirect]);
